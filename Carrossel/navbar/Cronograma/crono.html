@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Programa Aí</title>
+  <link rel="stylesheet" href="cronostyle.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../../../img/logo.svg" type="image/x-icon">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <link rel="stylesheet" href="../style_navbar.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+
+<body>
+
+  <header >
+    <a href="#" class="logo">
+      <i class="ri-code-s-slash-line"></i>
+      <span>Programa Aí</span>
+    </a>
+
+    <ul class="navbar">
+      <li>
+        <a href="#"  id="Home" onclick="homepage()">Home</a>
+      </li>
+
+      <li>
+        <a href="#" id="About" onclick="aboutpage()">Quem Somos</a>
+      </li>
+
+      <li>
+        <a href="#" class="active" id="Cronograma" onclick="cronopage()">Cronograma</a>
+      </li>
+    </ul>
+    <div class="main">
+      <a href="#" class="user" onclick="perfil()"><i class="ri-user-3-fill"></i>Perfil</a>
+      <div class="bx bx-menu" id="menu_icon"></div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="left">
+      <div class="calendar">
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">dezembro 2015</div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+        <div class="weekdays">
+          <div>Domingo</div>
+          <div>Segunda</div>
+          <div>Terça</div>
+          <div>Quarta</div>
+          <div>Quinta</div>
+          <div>Sexta</div>
+          <div>Sábado</div>
+        </div>
+        <div class="days"></div>
+        <div class="goto-today">
+          <div class="goto">
+            <input type="text" placeholder="mes/ano" class="date-input" />
+            <button class="goto-btn">Buscar</button>
+          </div>
+          <button class="today-btn">Hoje</button>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="today-date">
+        <div class="event-day">Tue</div>
+        <div class="event-date">12 dezembro 2022</div>
+      </div>
+      <div class="events"></div>
+      <div class="add-event-wrapper">
+        <div class="add-event-header">
+          <div class="title">Adcionar Anotações</div>
+          <i class="fas fa-times close"></i>
+        </div>
+        <div class="add-event-body">
+          <div class="add-event-input">
+            <input type="text" placeholder="Nome do Evento" class="event-name" />
+          </div>
+          <div class="add-event-input">
+            <input type="text" placeholder="Horário Inicial do Evento" class="event-time-from" />
+          </div>
+          <div class="add-event-input">
+            <input type="text" placeholder="Horário final do Evento" class="event-time-to" />
+          </div>
+        </div>
+        <div class="add-event-footer">
+          <button class="add-event-btn">Adicionar Anotação</button>
+        </div>
+      </div>
+    </div>
+    <button class="add-event">
+      <i class="fas fa-plus"></i>
+    </button>
+  </div>
+
+  <!-- Importação do Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  
+  <script src="../navbar.js"></script>
+  <script src="cronojs.js"></script>
+
+</body>
+
+</html>

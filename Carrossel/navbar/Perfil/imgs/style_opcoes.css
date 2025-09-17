@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Righteous', cursive;
+    background: linear-gradient(to left top, #B794C0, #D7C5DF);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.opcoes-container {
+  width: 100%;
+  text-align: center;
+}
+
+.opcoes-container h1 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+}
+
+.opcoes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  margin: 50px;
+
+}
+
+.opcoes-grid img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  cursor: pointer;
+}
+
+.img  {
+  transition: transform 0.3s ease;
+}
+
+.img:hover {
+  transform: scale(1.1);
+}

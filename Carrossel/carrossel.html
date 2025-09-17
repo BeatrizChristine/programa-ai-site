@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Programa Aí</title>
+  <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="navbar/style_navbar.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+
+<body>
+  
+  <header>
+    <a href="#" class="logo">
+      <i class="ri-code-s-slash-line"></i>
+      <span>Programa Aí</span>
+    </a>
+
+    <ul class="navbar">
+      <li>
+        <a href="#" class="active" id="Home" onclick="homepage()">Home</a>
+      </li>
+
+      <li>
+        <a href="#" id="About" onclick="aboutpage()">Quem Somos</a>
+      </li>
+
+      <li>
+        <a href="#" id="Cronograma" onclick="cronopage()">Cronograma</a>
+      </li>
+    </ul>
+
+    <div class="main">
+      <a href="#" class="user" onclick="perfil()"><i class="ri-user-3-fill"></i>Perfil</a>
+      <div class="bx bx-menu" id="menu_icon"></div>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <i id="left" class="fa-solid fa-angle-left"></i>
+    <ul class="carousel">
+
+      <li class="card">
+        <div class="img"><img src="images/css_icon.svg" alt="img" draggable="false"></div>
+        <h2><strong>CSS</strong></h2>
+        <span>Quer aprender mais sobre essa linguagem? Clique Aqui!</span>
+      </li>
+
+      <li class="card">
+        <div class="img"><img src="images/csharp_icon.svg" alt="img" draggable="false"></div>
+        <h2><strong>C#</strong></h2>
+        <span>Quer aprender mais sobre essa linguagem? Clique Aqui!</span>
+      </li>
+
+      <li class="card">
+        <div class="img"><img src="images/html_icon.svg" alt="img" draggable="false"></div>
+        <h2><strong>HTML</strong></h2>
+        <span>Quer aprender mais sobre essa linguagem? Clique Aqui!</span>
+      </li>
+
+      <li class="card">
+        <div class="img"><img src="images/java_icon.svg" alt="img" draggable="false"></div>
+        <h2><strong>JAVA</strong></h2>
+        <span>Quer aprender mais sobre essa linguagem? Clique Aqui!</span>
+      </li>
+
+      <li class="card">
+        <div class="img"><img src="images/js_icon.svg" alt="img" draggable="false"></div>
+        <h2><strong>JAVA SCRIPT</strong></h2>
+        <span>Quer aprender mais sobre essa linguagem? Clique Aqui!</span>
+      </li>
+
+      <li class="card" id="php_icon">
+        <div class="img "><img src="images/php_icon.svg" alt="img" draggable="false"></div>
+        <h2><strong>PHP</strong></h2>
+        <span>Quer aprender mais sobre essa linguagem? Clique Aqui!</span>
+      </li>
+
+      <li class="card">
+        <div class="img"><img src="images/python_icon.svg" alt="img" draggable="false"></div>
+        <h2><strong>PYTHON</strong></h2>
+        <span>Quer aprender mais sobre essa linguagem? Clique Aqui!</span>
+      </li>
+
+    </ul>
+    <i id="right" class="fa-solid fa-angle-right"></i>
+  </div>
+  
+  <!-- Importação do Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="navbar/navbar.js"></script>
+</body>
+
+</html>

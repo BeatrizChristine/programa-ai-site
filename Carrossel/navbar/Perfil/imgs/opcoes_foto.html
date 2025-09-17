@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opções de Foto</title>
+
+    <link rel="stylesheet" href="style_opcoes.css">
+</head>
+
+<body>
+    <div class="opcoes-container">
+        <h1>Escolha sua foto!</h1>
+
+        <div class="opcoes-grid">
+            <img class="img" src="mulher01.png" alt="Foto 1" onclick="selecionarFoto('mulher01.png')">
+            <img class="img" src="mulher02.png" alt="Foto 2" onclick="selecionarFoto('mulher02.png')">
+            <img class="img" src="mulher03.png" alt="Foto 3" onclick="selecionarFoto('mulher03.png')">
+            <img class="img" src="mulher04.png" alt="Foto 4" onclick="selecionarFoto('mulher04.png')">
+            <img class="img" src="mulher05.png" alt="Foto 5" onclick="selecionarFoto('mulher05.png')">
+            <img class="img" src="homem01.png" alt="Foto 6" onclick="selecionarFoto('homem01.png')">
+            <img class="img" src="homem02.png" alt="Foto 7" onclick="selecionarFoto('homem02.png')">
+            <img class="img" src="homem03.png" alt="Foto 8" onclick="selecionarFoto('homem03.png')">
+            <img class="img" src="homem04.png" alt="Foto 9" onclick="selecionarFoto('homem04.png')">
+            <img class="img" src="homem05.png" alt="Foto 10" onclick="selecionarFoto('homem05.png')">
+
+        </div>
+    </div>
+
+    <script>
+        
+        function selecionarFoto(nomeFoto) {
+            window.opener.postMessage({ foto: nomeFoto }, window.location.origin);
+            window.close();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const imagens = document.querySelectorAll('.opcoes-grid img');
+            imagens.forEach(function (imagem) {
+                imagem.addEventListener('click', function () {
+                    selecionarFoto(imagem.src);
+                });
+            });
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
