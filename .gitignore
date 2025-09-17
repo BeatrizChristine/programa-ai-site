@@ -1,0 +1,10 @@
+# Dependências
+node_modules/
+
+# Configs sensíveis
+.env
+firebaseConfig.js
+
+# Cache / lixo
+.DS_Store
+dist/
